@@ -57,4 +57,5 @@ To get a local copy up and running, follow these simple steps.
 
 2. Open browser and Navigate to `http://localhost:3000`
 
-### Feel free to customize this template to fit the specifics of your project. Let me know if you need any more details or additional sections!
+
+*Feel free to customize this template to fit the specifics of your project. Let me know if you need any more details or additional sections!*
