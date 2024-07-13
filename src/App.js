@@ -44,12 +44,15 @@ export default function App() {
   }
 
   useEffect(() => {
+    const controller = new AbortController();
+
     async function fetchMovies() {
       try {
         setLoading(true);
         setError("");
         const response = await fetch(
-          `https://www.omdbapi.com/?apikey=b7666db7&s=${query}`
+          `https://www.omdbapi.com/?apikey=b7666db7&s=${query}`,
+          { signal: controller.signal }
         );
         const data = await response.json();
 
@@ -77,6 +80,10 @@ export default function App() {
     }
 
     fetchMovies();
+
+    return function () {
+      controller.abort();
+    };
   }, [query]);
 
   return (

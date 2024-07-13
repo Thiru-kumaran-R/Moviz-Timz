@@ -29,6 +29,7 @@ To get a local copy up and running, follow these simple steps.
 
 ### Prerequisites
 
+- OMDB API key
 - Node.js and npm installed
 - MongoDB installed and running
 
@@ -43,7 +44,7 @@ To get a local copy up and running, follow these simple steps.
 2. Navigate to project dirctory
 
    ```sh
-   cd movie-search-rating-app
+   cd moviz-timz
    ```
 
 3. Install NPM packages
