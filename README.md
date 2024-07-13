@@ -6,6 +6,7 @@
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Demo](#demo)
 
 ## Introduction
 
@@ -17,6 +18,10 @@ Welcome to the Movie Search and Rating App! This project allows users to search 
 - View detailed information about each movie
 - Rate movies on a scale of 1 to 10
 - View average ratings and number of ratings for each movie
+
+## Demo
+
+<img width="1424" alt="Screenshot 2024-07-13 at 10 33 20 PM" src="https://github.com/user-attachments/assets/5f8348d6-d7d2-411d-9c62-d0589d5a44ba">
 
 ## Installation
 
@@ -57,5 +62,4 @@ To get a local copy up and running, follow these simple steps.
 
 2. Open browser and Navigate to `http://localhost:3000`
 
-
-*Feel free to customize this template to fit the specifics of your project. Let me know if you need any more details or additional sections!*
+_Feel free to customize this template to fit the specifics of your project. Let me know if you need any more details or additional sections!_
