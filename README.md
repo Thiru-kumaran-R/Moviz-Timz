@@ -4,9 +4,9 @@
 
 - [Introduction](#introduction)
 - [Features](#features)
+- [Demo](#demo)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Demo](#demo)
 
 ## Introduction
 
@@ -18,6 +18,7 @@ Welcome to the Movie Search and Rating App! This project allows users to search 
 - View detailed information about each movie
 - Rate movies on a scale of 1 to 10
 - View average ratings and number of ratings for each movie
+- Add movies to watch list
 
 ## Demo
 
@@ -25,7 +26,9 @@ Welcome to the Movie Search and Rating App! This project allows users to search 
 
 ## Installation
 
-To get a local copy up and running, follow these simple steps and before that lead to this website "[OMDB](https://www.omdbapi.com/)" to generate your own API key. Paste the generated KEY in API_KEY constant in src/App.js and src/components/MoviesDetails.js file.
+To get a local copy up and running, follow these simple steps and before that lead to this website [OMDB](https://www.omdbapi.com/) to generate your own API key.
+
+Paste the generated KEY in API_KEY constant in src/App.js and src/components/MoviesDetails.js file.
 
 ### Prerequisites
 
