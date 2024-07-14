@@ -11,30 +11,40 @@ import { MoviesDetail } from "./components/MoviesDetail.js";
 import { Error } from "./components/Error.js";
 import { Loading } from "./components/Loading.js";
 
+const API_KEY = "https://www.omdbapi.com/?apikey=b7666db7";
+
 export default function App() {
   const [movies, setMovies] = useState([]);
-  const [watched, setWatched] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [query, setQuery] = useState("");
   const [selectedID, setSelectedID] = useState(null);
+  const [watched, setWatched] = useState(function () {
+    const storedValue = localStorage.getItem("watched");
+    return JSON.parse(storedValue);
+  });
 
   function handleAddWatched(movie) {
     setWatched((prevMovie) => [...prevMovie, movie]);
   }
 
   function handleDeleteWatched(id) {
-    setWatched((prevMovie) => prevMovie.filter((movieID) => movieID !== id));
+    setWatched((watched) => watched.filter((movie) => movie.imdbID !== id));
   }
+
+  useEffect(
+    function () {
+      localStorage.setItem("watched", JSON.stringify(watched));
+    },
+    [watched]
+  );
 
   useEffect(() => {
     async function fetchMovies() {
       try {
         setLoading(true);
         setError("");
-        const response = await fetch(
-          `https://www.omdbapi.com/?apikey=b7666db7&s=${query}`
-        );
+        const response = await fetch(`${API_KEY}&s=${query}`);
         const data = await response.json();
 
         console.log(data);

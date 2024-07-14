@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Loading } from "./Loading.js";
 import StarRating from "./StarRating";
 
+const API_KEY = "https://www.omdbapi.com/?apikey=b7666db7";
+
 export function MoviesDetail({
   selectedID,
   setSelectedID,
@@ -46,9 +48,7 @@ export function MoviesDetail({
     function () {
       async function getMovieDetails() {
         setLoading(true);
-        const response = await fetch(
-          `http://www.omdbapi.com/?apikey=b7666db7&i=${selectedID}`
-        );
+        const response = await fetch(`${API_KEY}&i=${selectedID}`);
         const data = await response.json();
         setMovie(data);
         setLoading(false);
