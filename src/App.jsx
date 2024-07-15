@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
-import { NavBar } from "./components/NavBar.js";
-import { Search } from "./components/Search.js";
-import { NumResults } from "./components/NumResults.js";
-import { Box } from "./components/Box.js";
-import { Main } from "./components/Main.js";
-import { MovieList } from "./components/MovieList.js";
-import { WatchedSummary } from "./components/WatchedSummary.js";
-import { WatchedMoviesList } from "./components/WatchedMoviesList.js";
-import { MoviesDetail } from "./components/MoviesDetail.js";
-import { Error } from "./components/Error.js";
-import { Loading } from "./components/Loading.js";
+import { NavBar } from "./components/NavBar.jsx";
+import { Search } from "./components/Search.jsx";
+import { NumResults } from "./components/NumResults.jsx";
+import { Box } from "./components/Box.jsx";
+import { Main } from "./components/Main.jsx";
+import { MovieList } from "./components/MovieList.jsx";
+import { WatchedSummary } from "./components/WatchedSummary.jsx";
+import { WatchedMoviesList } from "./components/WatchedMoviesList.jsx";
+import { MoviesDetail } from "./components/MoviesDetail.jsx";
+import { Error } from "./components/Error.jsx";
+import { Loading } from "./components/Loading.jsx";
 
 const API_KEY = "https://www.omdbapi.com/?apikey=b7666db7";
 

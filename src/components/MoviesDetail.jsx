@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
-import { Loading } from "./Loading.js";
-import StarRating from "./StarRating";
+import { useState, useEffect, useRef } from "react";
+import { Loading } from "./Loading.jsx";
+import StarRating from "./StarRating.jsx";
 
 const API_KEY = "https://www.omdbapi.com/?apikey=b7666db7";
 
@@ -15,6 +15,8 @@ export function MoviesDetail({
   const [userRating, setUserRating] = useState("");
 
   const isWatched = watched.map((movie) => movie.imdbID).includes(selectedID);
+
+  const counter = useRef(0);
 
   const {
     Title: title,
@@ -38,11 +40,19 @@ export function MoviesDetail({
       imdbRating: Number(imdbRating),
       runtime: Number(runtime.split(" ").at(0)),
       userRating: Number(userRating),
+      userClicks: counter.current,
     };
 
     onAddWatched(newWatchedMovie);
     setSelectedID(null);
   }
+
+  useEffect(
+    function () {
+      if (userRating) counter.current++;
+    },
+    [userRating]
+  );
 
   useEffect(
     function () {
