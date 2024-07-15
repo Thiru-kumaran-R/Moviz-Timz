@@ -22,7 +22,7 @@ Welcome to the Movie Search and Rating App! This project allows users to search 
 
 ## Demo
 
-<img width="1424" alt="Screenshot 2024-07-13 at 10 33 20 PM" src="https://github.com/user-attachments/assets/5f8348d6-d7d2-411d-9c62-d0589d5a44ba">
+Follow this link for demo : [Moviz-Timz](https://moviz-timz.vercel.app/)
 
 ## Installation
 
