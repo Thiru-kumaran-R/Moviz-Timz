@@ -20,7 +20,7 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [selectedID, setSelectedID] = useState(null);
   const [watched, setWatched] = useState(function () {
-    const storedValue = localStorage.getItem("watched");
+    const storedValue = localStorage.getItem("watched") || [];
     return JSON.parse(storedValue);
   });
 
